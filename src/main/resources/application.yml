@@ -1,0 +1,20 @@
+logging:
+  level:
+    root: warn
+    cn.jinelei: debug
+
+security:
+  oauth2:
+    client:
+      clientId: resource1
+      clientSecret: secret
+      userAuthorizationUri: http://jinelei.cn:8000/oauth/authorize
+      grant-type: password
+      scope: read
+      access-token-uri: http://jinelei.cn:8000/oauth/token
+    resource:
+      userInfoUri: http://jinelei.cn:8000/user
+    authorization:
+      check-token-access: http://jinelei.cn:8000/oauth/check_token
+  basic:
+    enabled: false
